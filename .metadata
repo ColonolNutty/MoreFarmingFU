@@ -3,6 +3,6 @@
   "description" : "More Farming Crops added to Frackin' Universe Biomes",
   "friendlyName" : "More Farming - Frackin' Universe",
   "name" : "MoreFarmingFU",
-  "requires" : ["FrackinUniverse"],
+  "requires" : ["MoreFarming", "FrackinUniverse"],
   "version" : "v1.0.0"
 }
