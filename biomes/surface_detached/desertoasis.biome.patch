@@ -1,0 +1,162 @@
+[
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildartichokeMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildbellpepperMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 5 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildcucumberMSMseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildonionMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildpricklypearMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildjelondryMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildorangeMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildpalsterstickMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  }
+]

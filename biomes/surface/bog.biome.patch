@@ -1,0 +1,102 @@
+[
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildblueberriesPBJseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildreedBMBsprout" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildflytrapMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wilddungrootMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [ 
+            [1, "wildfinkelMFMseed" ]
+          ],
+          "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  }
+]
