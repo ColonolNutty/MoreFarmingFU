@@ -1,6 +1,6 @@
 {
   "author" : "ColonolNutty",
-  "description" : "More Farming Crops added to Frackin' Universe Biomes",
+  "description" : "An addon for More Farming that adds crops to Frackin' Universe Biomes. THIS REQUIRES 'CN MORE FARMING: REVITALIZATION'",
   "friendlyName" : "More Farming - Frackin' Universe",
   "name" : "MoreFarmingFU",
   "requires" : ["MoreFarming", "FrackinUniverse"],
