@@ -40,6 +40,7 @@
   { "op": "add", "path": "/isn_seedOutputs/rutabagaMFMseed", "value": "rutabagaMFM" },
   { "op": "add", "path": "/isn_seedOutputs/saguaroMFMseed", "value": "saguaroMFM" },
   { "op": "add", "path": "/isn_seedOutputs/shadowbulbMFMseed", "value": "shadowbulbMFM" },
+  { "op": "add", "path": "/isn_seedOutputs/soybeanMFMseed", "value": "soybeanMFM" },
   { "op": "add", "path": "/isn_seedOutputs/strawberryPBJseed", "value": "strawberryPBJ" },
   { "op": "add", "path": "/isn_seedOutputs/sugarbeetMFMseed", "value": "sugarbeetMFM" },
   { "op": "add", "path": "/isn_seedOutputs/sweetpotatoMFMseed", "value": "sweetpotatoMFM" },
