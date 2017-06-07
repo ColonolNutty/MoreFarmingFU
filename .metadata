@@ -1,10 +1,10 @@
 {
   "author" : "ColonolNutty",
-  "description" : "An addon for More Farming that adds crops to Frackin' Universe Biomes as well as support for a bunch of other things. THIS REQUIRES 'CN MORE FARMING: REVITALIZATION'\n\nIf you are subscribing to this version of the mod (Steam) then I'd recommend you also subscribe to the Steam version of More Farming, as you'll run into issues if you don't\n\nOtherwise here is a link to the chucklefish forums page: http://community.playstarbound.com/resources/cn-more-farming-revitalization-frackin-universe-addon.4710/\n\nFeatures:\n\n- Frackin Universe biomes will contain More Farming crops\n- Hydroponics and Growing Tray can grow More Farming produce\n",
+  "description" : "An addon for More Farming that adds crops to Frackin' Universe Biomes as well as support for a bunch of other things. THIS REQUIRES 'CN MORE FARMING: REVITALIZATION'\n\nIf you are subscribing to this version of the mod (Steam) then I'd recommend you also subscribe to the Steam version of More Farming, as you'll run into issues if you don't\n\nOtherwise here is a link to the chucklefish forums page: http://community.playstarbound.com/resources/cn-more-farming-revitalization-frackin-universe-addon.4710/\n\nFeatures:\n\n- Frackin Universe biomes will contain More Farming crops\n- Hydroponics and Growing Tray can grow More Farming produce",
   "friendlyName" : "CN More Farming - Frackin' Universe",
   "includes" : ["MoreFarming", "FrackinUniverse"],
   "link" : "steam://url/CommunityFilePage/928896807",
   "name" : "MoreFarmingFU",
   "steamContentId" : "928896807",
-  "version" : "v1.0.0"
+  "version" : "v1.0.1"
 }
