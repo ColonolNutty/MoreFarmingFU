@@ -25,7 +25,7 @@
   { "op": "add", "path": "/isn_seedOutputs/holidayfirMFMseed", "value": "holidayfirMFM" },
   { "op": "add", "path": "/isn_seedOutputs/jalapenopepperMFMseed", "value": "jalapenopepperMFM" },
   { "op": "add", "path": "/isn_seedOutputs/jelonMFMseed", "value": "jelonMFM" },
-  { "op": "add", "path": "/isn_seedOutputs/oatsMFMseed", "value": "oatsMFM" },
+  { "op": "add", "path": "/isn_seedOutputs/oatsMFMseed", "value": "wholeoatsMFM" },
   { "op": "add", "path": "/isn_seedOutputs/onionMFMseed", "value": "onionMFM" },
   { "op": "add", "path": "/isn_seedOutputs/orangeMFMseed", "value": "orangeMFM" },
   { "op": "add", "path": "/isn_seedOutputs/palsterstickMFMseed", "value": "palsterstickMFM" },
