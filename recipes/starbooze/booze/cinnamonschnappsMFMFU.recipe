@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "sugar", "count" : 1 },
+    { "item" : "cinnamonMFM", "count" : 5 },
+    { "item" : "spirits", "count" : 1 },
+    { "item" : "bottle", "count" : 1 }
+  ],
+  "output" : { "item" : "cinnamonschnapps", "count" : 1 },
+  "groups" : [ "distillery", "ale", "all", "other" ]
+}
