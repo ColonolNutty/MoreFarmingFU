@@ -32,7 +32,7 @@
       "objectSets" : [
         {
           "pool" : [ 
-            [1, "wildportabelloMFMseed" ]
+            [1, "wildportobelloMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
         }
