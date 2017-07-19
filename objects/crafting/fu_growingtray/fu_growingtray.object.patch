@@ -35,6 +35,7 @@
   { "op": "add", "path": "/isn_seedOutputs/peaMFMseed", "value": "peaMFM" },
   { "op": "add", "path": "/isn_seedOutputs/peanutPBJseed", "value": "peanutPBJ" },
   { "op": "add", "path": "/isn_seedOutputs/portabelloMFMseed", "value": "shroom" },
+  { "op": "add", "path": "/isn_seedOutputs/portobelloMFMseed", "value": "shroom" },
   { "op": "add", "path": "/isn_seedOutputs/pricklypearMFMseed", "value": "pricklypearMFMMFM" },
   { "op": "add", "path": "/isn_seedOutputs/pumpkinMFMseed", "value": "pumpkinMFM" },
   { "op": "add", "path": "/isn_seedOutputs/raspberryPBJseed", "value": "raspberryPBJ" },
