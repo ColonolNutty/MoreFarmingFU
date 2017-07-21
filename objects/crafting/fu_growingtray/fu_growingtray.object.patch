@@ -11,7 +11,7 @@
   { "op": "add", "path": "/isn_seedOutputs/brusselsproutMFMseed", "value": "brusselsproutMFM" },
   { "op": "add", "path": "/isn_seedOutputs/cauliflowerMFMseed", "value": "cauliflowerMFM" },
   { "op": "add", "path": "/isn_seedOutputs/cinnamonMFMseed", "value": "cinnamonMFM" },
-  { "op": "add", "path": "/isn_seedOutputs/cocoaMFMseed", "value": "rawcocoabeansMFM" },
+  { "op": "add", "path": "/isn_seedOutputs/cocoaMFMseed", "value": "cocoa" },
   { "op": "add", "path": "/isn_seedOutputs/coconutpalmMFMseed", "value": "coconut" },
   { "op": "add", "path": "/isn_seedOutputs/cucumberMSMseed", "value": "cucumberMSM" },
   { "op": "add", "path": "/isn_seedOutputs/dragonfruitMFMseed", "value": "dragonfruitMFM" },
