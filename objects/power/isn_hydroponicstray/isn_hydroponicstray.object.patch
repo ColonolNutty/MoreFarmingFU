@@ -2,6 +2,7 @@
   { "op": "add", "path": "/isn_seedOutputs/appleMFMseed", "value": "redapple" },
   { "op": "add", "path": "/isn_seedOutputs/artichokeMFMseed", "value": "artichokeMFM" },
   { "op": "add", "path": "/isn_seedOutputs/asparagusMFMseed", "value": "asparagusMFM" },
+  { "op": "add", "path": "/isn_seedOutputs/avocadoMFMseed", "value": "avocadoMSM" },
   { "op": "add", "path": "/isn_seedOutputs/bambooBMBshoot", "value": "bamboostalkBMB" },
   { "op": "add", "path": "/isn_seedOutputs/beetMFMseed", "value": "beetMFM" },
   { "op": "add", "path": "/isn_seedOutputs/bellpepperMFMseed", "value": "greenbellpepperMFM" },
