@@ -4,11 +4,6 @@
     { "op": "add", "path": "/gui/craft", "value": {} }
   ],
   [
-    { "op": "test", "path": "/scriptWidgetCallbacks", "inverse": true },
-    { "op": "add", "path": "/scriptWidgetCallbacks", "value": [] }
-  ],
-  [
-    { "op": "remove", "path": "/gui/craft" },
-    { "op": "replace", "path": "/scriptWidgetCallbacks", "value": [ "toggleDebug" ] }
+    { "op": "remove", "path": "/gui/craft" }
   ]
 ]
