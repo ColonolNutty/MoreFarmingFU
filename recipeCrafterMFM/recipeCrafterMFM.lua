@@ -6,10 +6,14 @@ local rcUtilsFU = {};
 function init(virtual)
   RecipeCrafterMFMApi.init("[RCFU]")
   
+  if(storage.outputSlotModified == nil) then
+    storage.outputSlotModified = false;
+  end
+  
   storage.consumeIngredientsOnCraft = false;
   storage.noHold = true;
   storage.playSoundBeforeOutputPlaced = false;
-  storage.appendToOutput = false;
+  storage.appendNewOutputToCurrentOutput = false;
   
   -- This is to prevent receiving free items when loading the game with an output available but not taken
   -- The downside is, if someone is storing items in the output slot, they will lose them on loading their game. (A small sacrifice to prevent cheating)
@@ -27,8 +31,12 @@ end
 
 -------------------------------Callback Hooks------------------------------------
 
-function RecipeCrafterMFMApi.onIngredientsChanged()
-  RecipeCrafterMFMApi.startCrafting()
+function RecipeCrafterMFMApi.beforeCraftStart()
+  storage.outputSlotModified = false;
+end
+
+function RecipeCrafterMFMApi.onContainerContentsChanged()
+  RecipeCrafterMFMApi.craftItem()
 end
 
 function RecipeCrafterMFMApi.onNoRecipeFound()
@@ -37,6 +45,8 @@ end
 
 -------------------------------------------------------------------
 
+-- Returns true if no output slot item, if required ingredients still exist, or if the output slot has not been modified
+-- Returns false if output slot is modified or if there is no previous recipe
 function RecipeCrafterMFMApi.isOutputSlotAvailable()
   local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
   -- Output slot is empty
@@ -46,8 +56,6 @@ function RecipeCrafterMFMApi.isOutputSlotAvailable()
       DebugUtilsCN.logDebug("Output item taken, consuming ingredients for recipe with output: " .. storage.previousRecipe.output.name)
       rcUtilsFU.consumeIngredients()
     end
-    storage.previousRecipe = nil;
-    storage.outputSlotModified = false;
     return true;
   end
   
@@ -70,7 +78,7 @@ function RecipeCrafterMFMApi.isOutputSlotAvailable()
   
   -- When the output slot item changes
   
-  -- Output item is different than the previous recipe results
+  -- Output item is different than the previous recipe result
   if(outputSlotItem.name ~= previousOutput.name) then
     storage.outputSlotModified = true;
     DebugUtilsCN.logDebug("Output item changed, consuming ingredients for recipe with output: " .. previousOutput.name)
@@ -78,9 +86,9 @@ function RecipeCrafterMFMApi.isOutputSlotAvailable()
     return false;
   end
   
-  -- Output item has the same name as the previous recipe results
+  -- Output item has the same name as the previous recipe result
   if(outputSlotItem.name == previousOutput.name) then
-    -- Output item has the same count as the previous recipe results
+    -- Output item has the same count as the previous recipe result
     if(outputSlotItem.count ~= previousOutput.count) then
       storage.outputSlotModified = true;
       DebugUtilsCN.logDebug("Consuming ingredients for recipe with output: " .. previousOutput.name)
@@ -106,21 +114,9 @@ function rcUtilsFU.removeOutput()
     return;
   end
   
-  -- Find existing output
-  local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
-  if outputSlotItem == nil then
-    rcUtilsFU.resetForNewRecipe()
-    return
-  end
+  -- The output item is one we placed, so remove it
+  world.containerTakeAt(entity.id(), storage.outputSlot);
   
-  if storage.previousRecipe then
-    local outputItem = storage.previousRecipe.output
-    -- If the item in the output is the same as the one we placed
-    -- then we remove the amount we placed and spit the rest out of the machine
-    if outputSlotItem.name == outputItem.name then
-      world.containerConsumeAt(entity.id(), storage.outputSlot, outputItem.count)
-    end
-  end
   -- If output still exists, we ignore it and prevent adding new output
   rcUtilsFU.resetForNewRecipe()
 end
