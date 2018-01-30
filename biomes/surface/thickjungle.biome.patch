@@ -1,4 +1,19 @@
 [
+	{
+		"op": "add",
+		"path": "/surfacePlaceables/items/-",
+		"value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:uncommonRandomMFM",
+      "type" : "tree",
+      "treeFoliageHueShiftMax" : 0,
+      "treeStemHueShiftMax" : 0,
+      "treeStemList" : [ "coconutwoodMFM" ],
+      "treeFoliageList" : [ "coconutMFM" ]
+    }
+	},
   {
     "op": "add",
     "path": "/surfacePlaceables/items/-",
@@ -14,7 +29,6 @@
           "pool" : [ 
             [1, "wildgreatbambooMFMseed" ],
             [1, "wildsoybeanMFMseed" ],
-            [1, "wildcoconutpalmMFMseed" ],
             [1, "wildeggplantMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
