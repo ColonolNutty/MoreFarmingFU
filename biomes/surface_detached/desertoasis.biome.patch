@@ -13,6 +13,7 @@
       "treeStemHueShiftMax" : 10,
       "treeStemList" : [ "orangewoodMFM" ],
       "treeFoliageList" : [ "orangeMFM" ]
+    }
   },
   {
     "op": "add",

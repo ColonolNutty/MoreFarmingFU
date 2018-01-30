@@ -13,6 +13,7 @@
       "treeStemHueShiftMax" : 10,
       "treeStemList" : [ "applewoodMFM", "greenapplewoodMFM" ],
       "treeFoliageList" : [ "appleMFM", "greenappleMFM" ]
+    }
   },
   {
     "op": "add",

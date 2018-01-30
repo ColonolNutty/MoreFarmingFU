@@ -13,6 +13,7 @@
       "treeStemHueShiftMax" : 10,
       "treeStemList" : [ "dragonfruitwoodMFM", "coconutwoodMFM" ],
       "treeFoliageList" : [ "dragonfruitMFM", "coconutMFM" ]
+    }
   },
   {
     "op": "add",
