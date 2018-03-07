@@ -1,0 +1,9 @@
+[
+  [
+    { "op": "test", "path": "/gui/craft", "inverse": true },
+    { "op": "add", "path": "/gui/craft", "value": {} }
+  ],
+  [
+    { "op": "remove", "path": "/gui/craft" }
+  ]
+]

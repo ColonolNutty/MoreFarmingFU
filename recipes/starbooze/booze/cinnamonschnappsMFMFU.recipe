@@ -6,5 +6,5 @@
     { "item" : "bottle", "count" : 1 }
   ],
   "output" : { "item" : "cinnamonschnapps", "count" : 1 },
-  "groups" : [ "distillery", "ale", "all", "other" ]
+  "groups" : [ "distillingMFM", "distillery", "ale", "all", "other" ]
 }
