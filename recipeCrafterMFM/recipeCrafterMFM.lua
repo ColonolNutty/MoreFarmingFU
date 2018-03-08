@@ -6,8 +6,7 @@ local logger = nil;
 
 function init(virtual)
   logger = DebugUtilsCN.init("[RCFU]")
-  RecipeCrafterMFMApi.init("/_MFMFUversioning.config")
-  RecipeCrafterMFMApi.printMetaData("/_MFMversioning.config")
+  RecipeCrafterMFMApi.init()
   
   storage.consumeIngredientsOnCraft = false;
   storage.noHold = true;

@@ -1,0 +1,3 @@
+[
+	{ "op": "add", "path" : "/deploymentConfig/scripts/-", "value" : "/scripts/mfmfu_player_init.lua"}
+]
