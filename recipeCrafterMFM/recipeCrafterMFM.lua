@@ -16,13 +16,6 @@ function init(virtual)
   if(storage.outputSlotModified == nil) then
     storage.outputSlotModified = false;
   end
-  if(storage.hasCrafted == nil) then
-    storage.hasCrafted = false;
-  end
-  
-  if(storage.outputSlot == nil) then
-    return
-  end
   
   -- This is to prevent receiving free items when loading the game with an output available but not taken
   -- The downside is, if someone is storing items in the output slot, they will lose them on loading their game. (A small sacrifice to prevent cheating)
@@ -48,9 +41,6 @@ end
 --   Output slot is modified
 --   There is no previous recipe
 function RecipeCrafterMFMApi.isOutputSlotAvailable()
-  if(storage.outputSlot == nil) then
-    return false;
-  end
   local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
   -- Output slot is empty
   if(outputSlotItem == nil) then
@@ -121,13 +111,10 @@ function RecipeCrafterMFMApi.onContainerContentsChanged()
 end
 
 function RecipeCrafterMFMApi.onRecipeFound()
-  storage.hasCrafted = true;
 end
 
 function RecipeCrafterMFMApi.onNoIngredientsFound()
-  if(storage.outputSlotModified and storage.hasCrafted) then
-    rcUtilsFU.removeOutput();
-  end
+  rcUtilsFU.removeOutput();
 end
 
 function RecipeCrafterMFMApi.onNoRecipeFound()
@@ -157,7 +144,6 @@ function rcUtilsFU.removeOutput()
   
   storage.previousRecipe = nil;
   storage.outputSlotModified = false;
-  storage.hasCrafted = false;
 end
 
 function rcUtilsFU.releaseOutput()
