@@ -137,7 +137,7 @@ function rcUtilsFU.removeOutput()
     return;
   end
   
-  logger.logDebug("Removing output item from slot: " .. storage.outputSlot)
+  --logger.logDebug("Removing output item from slot: " .. storage.outputSlot)
   
   -- The output item is one we placed, so remove it
   world.containerTakeAt(entity.id(), storage.outputSlot);
