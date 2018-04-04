@@ -1,24 +1,20 @@
 [
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
+	{
+		"op" : "add",
+		"path" : "/surfacePlaceables/items/-",
+		"value" : {
       "mode" : "floor",
       "priority" : 1.0,
       "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
+      "distribution" : "/biomes/distributions.config:uncommonRandomMFM",
 
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildblackberryPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
+      "type" : "tree",
+      "treeFoliageHueShiftMax" : 180,
+      "treeStemHueShiftMax" : 15,
+      "treeStemList" : [ "holidayfirwoodMFM" ],
+      "treeFoliageList" : [ "holidayfirMFM" ]
     }
-  },
+	},
   {
     "op": "add",
     "path": "/surfacePlaceables/items/-",
@@ -32,69 +28,12 @@
       "objectSets" : [
         {
           "pool" : [ 
-            [1, "wildblueberriesPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildcauliflowerMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
+            [1, "wildblackberryPBJseed" ],
+            [1, "wildblueberriesPBJseed" ],
+            [1, "wildcauliflowerMFMseed" ],
             [1, "wildraspberryPBJseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildholidayfirMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 2 }
         }
       ]
     }
