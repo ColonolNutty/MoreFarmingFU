@@ -11,47 +11,9 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildblueberriesPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildreedBMBsprout" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
+          "pool" : [
+            [1, "wilddungrootMFMseed" ],
+            [1, "wildfinkelMFMseed" ],
             [1, "wildflytrapMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
@@ -71,30 +33,11 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wilddungrootMFMseed" ]
+          "pool" : [
+            [1, "wildblueberriesPBJseed" ],
+            [1, "wildreedBMBsprout" ]
           ],
-          "parameters" : { "startingStage" : 2 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildfinkelMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 2 }
+          "parameters" : { "startingStage" : 3 }
         }
       ]
     }

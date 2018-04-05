@@ -11,7 +11,7 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
+          "pool" : [
             [1, "wildblackberryPBJseed" ],
             [1, "wildraspberryPBJseed" ]
           ],
@@ -32,7 +32,7 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
+          "pool" : [
             [1, "wildflytrapMFMseed" ],
             [1, "wildgarpberryMFMseed" ],
             [1, "wildeggplantMFMseed" ]

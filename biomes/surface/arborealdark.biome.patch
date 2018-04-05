@@ -11,7 +11,8 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
+          "pool" : [
+            [1, "wildportobelloMFMseed" ],
             [1, "wildshadowbulbMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
@@ -31,27 +32,7 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildportobelloMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 2 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
+          "pool" : [
             [1, "wildrattanMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }

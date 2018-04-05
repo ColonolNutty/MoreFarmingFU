@@ -11,50 +11,31 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildblackberryPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildraspberryPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
+          "pool" : [
             [1, "wildportobelloMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [
+            [1, "wildblackberryPBJseed" ],
+            [1, "wildraspberryPBJseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
         }
       ]
     }

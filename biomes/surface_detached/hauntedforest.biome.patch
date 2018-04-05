@@ -11,150 +11,36 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildasparagusMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildblackberryPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildbroccoliMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildbrusselsproutMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildpeaMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildstrawberryPBJseed" ]
-          ],
-          "parameters" : { "startingStage" : 3 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
-            [1, "wildpumpkinMFMseed" ]
-          ],
-          "parameters" : { "startingStage" : 2 }
-        }
-      ]
-    }
-  },
-  {
-    "op": "add",
-    "path": "/surfacePlaceables/items/-",
-    "value": {
-      "mode" : "floor",
-      "priority" : 1.0,
-      "variants" : 1,
-      "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-      "type" : "object",
-      "objectSets" : [
-        {
-          "pool" : [ 
+          "pool" : [
+            [1, "wildpumpkinMFMseed" ],
             [1, "wildshadowbulbMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
+        }
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
+      "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+      "type" : "object",
+      "objectSets" : [
+        {
+          "pool" : [
+            [1, "wildasparagusMFMseed" ],
+            [1, "wildblackberryPBJseed" ],
+            [1, "wildbroccoliMFMseed" ],
+            [1, "wildbrusselsproutMFMseed" ],
+            [1, "wildpeaMFMseed" ],
+            [1, "wildstrawberryPBJseed" ]
+          ],
+          "parameters" : { "startingStage" : 3 }
         }
       ]
     }

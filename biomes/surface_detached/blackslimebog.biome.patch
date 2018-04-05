@@ -11,10 +11,10 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildreedBMBsprout" ]
+          "pool" : [
+            [1, "wildfinkelMFMseed" ]
           ],
-          "parameters" : { "startingStage" : 3 }
+          "parameters" : { "startingStage" : 2 }
         }
       ]
     }
@@ -31,10 +31,10 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
-            [1, "wildfinkelMFMseed" ]
+          "pool" : [
+            [1, "wildreedBMBsprout" ]
           ],
-          "parameters" : { "startingStage" : 2 }
+          "parameters" : { "startingStage" : 3 }
         }
       ]
     }

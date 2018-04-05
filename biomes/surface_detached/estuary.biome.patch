@@ -11,7 +11,7 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
+          "pool" : [
             [1, "wildreedBMBsprout" ]
           ],
           "parameters" : { "startingStage" : 3 }

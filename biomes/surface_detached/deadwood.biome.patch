@@ -11,7 +11,7 @@
       "type" : "object",
       "objectSets" : [
         {
-          "pool" : [ 
+          "pool" : [
             [1, "wildportobelloMFMseed" ]
           ],
           "parameters" : { "startingStage" : 2 }
