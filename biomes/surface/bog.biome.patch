@@ -35,7 +35,9 @@
         {
           "pool" : [
             [1, "wildblueberriesPBJseed" ],
-            [1, "wildreedBMBsprout" ]
+            [1, "wildkaleMFMseed" ],
+            [1, "wildreedBMBsprout" ],
+            [1, "wildscallionMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

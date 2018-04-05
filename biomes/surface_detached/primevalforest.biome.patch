@@ -9,10 +9,10 @@
       "distribution" : "/biomes/distributions.config:uncommonRandomMFM",
 
       "type" : "tree",
-      "treeFoliageHueShiftMax" : 0,
-      "treeStemHueShiftMax" : 10,
-      "treeStemList" : [ "orangewoodMFM" ],
-      "treeFoliageList" : [ "orangeMFM" ]
+      "treeFoliageHueShiftMax" : 180,
+      "treeStemHueShiftMax" : 15,
+      "treeStemList" : [ "orangewoodMFM", "clovewoodMFM" ],
+      "treeFoliageList" : [ "orangeMFM", "cloveMFM" ]
     }
   },
   {
@@ -49,7 +49,10 @@
       "objectSets" : [
         {
           "pool" : [
-            [1, "wildcocoaseed" ]
+            [1, "wildceleryMFMseed" ],
+            [1, "wildcocoaseed" ],
+            [1, "wildcorianderMFMseed" ],
+            [1, "wildscallionMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

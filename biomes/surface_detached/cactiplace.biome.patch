@@ -49,7 +49,8 @@
       "objectSets" : [
         {
           "pool" : [
-            [1, "wildjalapenopepperMFMseed" ]
+            [1, "wildjalapenopepperMFMseed" ],
+            [1, "wildthymeMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

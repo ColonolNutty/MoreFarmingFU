@@ -10,7 +10,7 @@
 
       "type" : "tree",
       "treeFoliageHueShiftMax" : 0,
-      "treeStemHueShiftMax" : 10,
+      "treeStemHueShiftMax" : 0,
       "treeStemList" : [ "applewoodMFM", "greenapplewoodMFM" ],
       "treeFoliageList" : [ "appleMFM", "greenappleMFM" ]
     }

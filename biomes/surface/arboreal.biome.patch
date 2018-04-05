@@ -10,8 +10,8 @@
       "type" : "tree",
       "treeFoliageHueShiftMax" : 0,
       "treeStemHueShiftMax" : 0,
-      "treeStemList" : [ "dragonfruitwoodMFM", "orangewoodMFM" ],
-      "treeFoliageList" : [ "dragonfruitMFM", "orangeMFM" ]
+      "treeStemList" : [ "dragonfruitwoodMFM", "orangewoodMFM", "staranisewoodMFM" ],
+      "treeFoliageList" : [ "dragonfruitMFM", "orangeMFM", "staraniseMFM" ]
     }
 	},
   {
@@ -58,7 +58,9 @@
             [1, "wildcocoaseed" ],
             [1, "wildjalapenopepperMFMseed" ],
             [1, "wildpeanutPBJseed" ],
-            [1, "wildrattanMFMseed" ]
+            [1, "wildrattanMFMseed" ],
+            [1, "wildrosemaryMFMseed" ],
+            [1, "wildsageMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

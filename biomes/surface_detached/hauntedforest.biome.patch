@@ -6,6 +6,22 @@
       "mode" : "floor",
       "priority" : 1.0,
       "variants" : 1,
+      "distribution" : "/biomes/distributions.config:uncommonRandomMFM",
+      
+      "type" : "tree",
+      "treeFoliageHueShiftMax" : 180,
+      "treeStemHueShiftMax" : 15,
+      "treeStemList" : [ "staranisewoodMFM" ],
+      "treeFoliageList" : [ "staraniseMFM" ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/surfacePlaceables/items/-",
+    "value": {
+      "mode" : "floor",
+      "priority" : 1.0,
+      "variants" : 1,
       "distribution" : "/biomes/distributions.config:surfaceCrops",
 
       "type" : "object",
@@ -35,6 +51,7 @@
           "pool" : [
             [1, "wildasparagusMFMseed" ],
             [1, "wildblackberryPBJseed" ],
+            [1, "wildblackpepperMFMseed" ],
             [1, "wildbroccoliMFMseed" ],
             [1, "wildbrusselsproutMFMseed" ],
             [1, "wildpeaMFMseed" ],
