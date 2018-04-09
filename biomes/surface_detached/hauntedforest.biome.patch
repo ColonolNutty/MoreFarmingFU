@@ -55,7 +55,7 @@
             [1, "wildbroccoliMFMseed" ],
             [1, "wildbrusselsproutMFMseed" ],
             [1, "wildpeaMFMseed" ],
-            [1, "wildstrawberryPBJseed" ]
+            [1, "wildstrawberryMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

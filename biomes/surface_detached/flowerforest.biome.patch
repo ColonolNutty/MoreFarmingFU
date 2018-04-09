@@ -32,7 +32,7 @@
             [1, "wildcucumberMFMseed" ],
             [1, "wildgarlicMFMseed" ],
             [1, "wildgreenbeanMFMseed" ],
-            [1, "wildstrawberryPBJseed" ]
+            [1, "wildstrawberryMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }
