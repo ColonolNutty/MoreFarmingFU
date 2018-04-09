@@ -33,7 +33,7 @@
       "objectSets" : [
         {
           "pool" : [
-            [1, "wildreedBMBsprout" ]
+            [1, "wildreedMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }
