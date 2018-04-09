@@ -12,7 +12,7 @@
       "objectSets" : [
         {
           "pool" : [
-            [1, "wildraspberryPBJseed" ]
+            [1, "wildraspberryMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }

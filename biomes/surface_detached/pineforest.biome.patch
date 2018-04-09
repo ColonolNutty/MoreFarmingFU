@@ -50,7 +50,7 @@
           "pool" : [
             [1, "wildblackberryMFMseed" ],
             [1, "wildblueberryMFMseed" ],
-            [1, "wildraspberryPBJseed" ],
+            [1, "wildraspberryMFMseed" ],
             [1, "wildrutabagaMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }

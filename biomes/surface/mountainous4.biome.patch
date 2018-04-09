@@ -15,7 +15,7 @@
             [1, "wildasparagusMFMseed" ],
             [1, "wildblackberryMFMseed" ],
             [1, "wildgreenbeanMFMseed" ],
-            [1, "wildraspberryPBJseed" ]
+            [1, "wildraspberryMFMseed" ]
           ],
           "parameters" : { "startingStage" : 3 }
         }
