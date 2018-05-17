@@ -1,5 +1,6 @@
 require "/scripts/debugUtilsCN.lua"
 require "/scripts/recipeCrafterAPI.lua"
+require "/scripts/MFM/recipeLocatorAPI.lua"
 
 local rcUtilsFU = {};
 local logger = nil;
@@ -7,23 +8,29 @@ local logger = nil;
 function init(virtual)
   logger = DebugUtilsCN.init("[RCFU]")
   RecipeCrafterMFMApi.init()
+  RecipeLocatorAPI.init();
   
+  ----- Configuration -----
   storage.consumeIngredientsOnCraft = false;
-  storage.noHold = true;
+  storage.holdIngredientsOnCraft = false;
   storage.playSoundBeforeOutputPlaced = false;
   storage.appendNewOutputToCurrentOutput = false;
-  
-  if(storage.outputSlotModified == nil) then
-    storage.outputSlotModified = false;
-  end
-  
-  -- This is to prevent receiving free items when loading the game with an output available but not taken
-  -- The downside is, if someone is storing items in the output slot, they will lose them on loading their game. (A small sacrifice to prevent cheating)
-  world.containerTakeAt(entity.id(), storage.outputSlot);
+  -------------------------
 end
 
 function update(dt)
   RecipeCrafterMFMApi.update(dt)
+  if(RecipeCrafterMFMApi.containerContentsChanged) then
+    if(rcUtilsFU.isOutputSlotModified()) then
+      rcUtilsFU.consumeIngredients()
+      storage.currentlySelectedRecipe = nil;
+    elseif(rcUtilsFU.shouldRemoveOutput()) then
+      rcUtilsFU.removeOutput()
+      storage.currentlySelectedRecipe = nil;
+    else
+      RecipeCrafterMFMApi.craftItem()
+    end
+  end
 end
 
 function die()
@@ -33,135 +40,115 @@ end
 
 -------------------------------Callback Hooks------------------------------------
 
--- Returns TRUE if
---   No output slot item
---   Required ingredients still exist
---   The output slot has not been modified
--- Returns FALSE if
---   Output slot is modified
---   There is no previous recipe
 function RecipeCrafterMFMApi.isOutputSlotAvailable()
   local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
   -- Output slot is empty
   if(outputSlotItem == nil) then
-    if(storage.previousRecipe ~= nil and storage.previousRecipe.output ~= nil and not storage.outputSlotModified) then
-      logger.logDebug("Output item taken, consuming ingredients for recipe with output: " .. storage.previousRecipe.output.name)
-      rcUtilsFU.consumeIngredients()
-    end
-    logger.logDebug("No output item detected in output slot")
+    logger.logDebug("No output item detected in output slot, it is available")
     return true;
   end
   
-  local previousRecipe = storage.previousRecipe;
+  local currentlySelectedRecipe = storage.currentlySelectedRecipe;
   
-  -- If there is no previousRecipe, but there is an output item or if the output slot item has been modified
-  if(previousRecipe == nil or storage.outputSlotModified) then
-    logger.logDebug("No previous recipe, and output slot was modified.")
+  -- If there is no currentlySelectedRecipe, but there is an output item
+  -- If the output slot item has been modified
+  if(currentlySelectedRecipe == nil) then
+    logger.logDebug("No previous recipe, but an output item exists")
     return false;
   end
   
+  local currentIngredients = RecipeCrafterMFMApi.getIngredients();
   -- When the ingredients change
   
   -- Check current ingredients to verify the previous recipe still has the required ingredients
-  local hasRequiredIngredients = RecipeCrafterMFMApi.hasIngredientsForRecipe(previousRecipe, storage.currentIngredients);
+  local hasRequiredIngredients = RecipeLocatorAPI.hasIngredientsForRecipe(currentlySelectedRecipe, currentIngredients);
   if(not hasRequiredIngredients) then
     logger.logDebug("Required ingredients missing for current recipe.")
     return true;
   end
-
-  local previousOutput = previousRecipe.output;
   
-  if(previousOutput == nil) then
-    storage.previousRecipe = nil;
-    logger.logDebug("No previous output, and output slot was modified.")
-    return false;
-  end
-  
-  -- When the output slot item changes
-  
-  -- Output item is different than the previous recipe result
-  if(outputSlotItem.name ~= previousOutput.name) then
-    storage.outputSlotModified = true;
-    logger.logDebug("Output item changed, consuming ingredients for recipe with output: " .. previousOutput.name)
-    rcUtilsFU.consumeIngredients()
-    return false;
-  end
-  
-  -- Output item has the same name as the previous recipe result
-  if(outputSlotItem.name == previousOutput.name) then
-    -- Output item has the same count as the previous recipe result
-    if(outputSlotItem.count ~= previousOutput.count) then
-      storage.outputSlotModified = true;
-      logger.logDebug("Consuming ingredients for recipe with output: " .. previousOutput.name)
-      rcUtilsFU.consumeIngredients()
-      return false;
-    else
-      logger.logDebug("Output slot item not taken, but modified")
-      return not storage.outputSlotModified;
-    end
-  end
+  return not rcUtilsFU.isOutputSlotModified();
 end
 
 function RecipeCrafterMFMApi.onCraftStart()
-  storage.outputSlotModified = false;
-end
-
-function RecipeCrafterMFMApi.onContainerContentsChanged()
-  RecipeCrafterMFMApi.craftItem()
 end
 
 function RecipeCrafterMFMApi.onRecipeFound()
 end
 
 function RecipeCrafterMFMApi.onNoIngredientsFound()
-  rcUtilsFU.removeOutput();
 end
 
 function RecipeCrafterMFMApi.onNoRecipeFound()
-  rcUtilsFU.removeOutput()
+  rcUtilsFU.removeOutput();
+  storage.currentlySelectedRecipe = nil;
 end
 
 -------------------------------------------------------------------
 
-function rcUtilsFU.consumeIngredients()
-  if(storage.previousRecipe == nil) then
-    return;
-  end
-  RecipeCrafterMFMApi.playCraftSound()
-  RecipeCrafterMFMApi.holdIngredients(storage.previousRecipe)
-  RecipeCrafterMFMApi.consumeIngredients()
-end
-
-function rcUtilsFU.removeOutput()
-  if(storage.outputSlotModified) then
-    return;
+function rcUtilsFU.isOutputSlotModified()
+  local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
+  
+  local currentlySelectedRecipe = storage.currentlySelectedRecipe;
+  -- If no previous recipe exists, then we haven't crafted yet
+  -- If we haven't crafted and there is an output slot item, then it is modified
+  -- If we haven't crafted and there is no output slot item, then it is not modified
+  if(currentlySelectedRecipe == nil or currentlySelectedRecipe.output == nil) then
+    logger.logDebug("No selected recipe");
+    return outputSlotItem ~= nil;
   end
   
-  --logger.logDebug("Removing output item from slot: " .. storage.outputSlot)
-  
-  -- The output item is one we placed, so remove it
-  world.containerTakeAt(entity.id(), storage.outputSlot);
-  
-  storage.previousRecipe = nil;
-  storage.outputSlotModified = false;
-end
-
-function rcUtilsFU.releaseOutput()
-  if(not storage.outputSlotModified) then
-    return
-  end
-  
-  local containerId = entity.id()
-  local outputSlotItem = world.containerItemAt(containerId, storage.outputSlot)
-  -- Output slot is empty
+  -- Output slot is empty, so it must be modified
   if(outputSlotItem == nil) then
-    logger.logDebug("No output item")
+    logger.logDebug("Expected item in output slot, but no item was found.");
     return true;
   end
   
-  logger.logDebug("Releasing output item with name: " .. outputSlotItem.name .. " and count: " .. outputSlotItem.count)
-  local toExpel = world.containerAddItems(containerId, outputSlotItem)
-  RecipeCrafterMFMApi.expelItems(toExpel)
+  local previousOutput = currentlySelectedRecipe.output;
+  
+  if(outputSlotItem.name ~= previousOutput.name) then
+    logger.logDebug("Item name in the output slot differs; Expected name: " .. previousOutput.name .. " Actual name: " .. outputSlotItem.name);
+    return true;
+  end
+  
+  if(outputSlotItem.count ~= previousOutput.count) then
+    logger.logDebug("Item count in the output slot differs; Expected count: " .. previousOutput.count .. " Actual count: " .. outputSlotItem.count);
+    return true;
+  end
+  
+  logger.logDebug("Output slot has not been modified.");
+  return false;
+end
+
+function rcUtilsFU.consumeIngredients()
+  if(storage.currentlySelectedRecipe == nil) then
+    return;
+  end
+  RecipeCrafterMFMApi.playCraftSound()
+  RecipeCrafterMFMApi.holdIngredients(storage.currentlySelectedRecipe)
+  RecipeCrafterMFMApi.consumeIngredients()
+end
+
+function rcUtilsFU.shouldRemoveOutput()
+  if(storage.currentlySelectedRecipe == nil) then
+    return false;
+  end
+  local currentIngredients = RecipeCrafterMFMApi.getIngredients();
+  return not RecipeLocatorAPI.hasIngredientsForRecipe(storage.currentlySelectedRecipe, currentIngredients);
+end
+
+function rcUtilsFU.removeOutput()
+  world.containerTakeAt(entity.id(), storage.outputSlot);
+  storage.currentlySelectedRecipe = nil
+end
+
+function rcUtilsFU.releaseOutput()
+  if(not rcUtilsFU.isOutputSlotModified()) then
+    logger.logDebug("Output slot not modified, not releasing output")
+    -- If not modified, then the output slot must be something the script put in, so remove it.
+    rcUtilsFU.removeOutput()
+    return true;
+  end
 end
 
 function die()
