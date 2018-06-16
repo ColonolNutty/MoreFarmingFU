@@ -1,9 +1,30 @@
 [
   [
-    { "op": "test", "path": "/gui/craft", "inverse": true },
-    { "op": "add", "path": "/gui/craft", "value": {} }
+    { "op": "test", "path": "/gui/toggleAutoCraft", "inverse": true },
+    { "op": "add", "path": "/gui/toggleAutoCraft", "value": {} }
   ],
   [
-    { "op": "remove", "path": "/gui/craft" }
+    { "op": "test", "path": "/gui/lblAutoCraft", "inverse": true },
+    { "op": "add", "path": "/gui/lblAutoCraft", "value": {} }
+  ],
+  [
+    { "op": "replace", "path": "/gui/toggleAutoCraft", "value": {
+        "type": "button",
+        "checkable" : true,
+        "base" : "/interface/crafting/checkboxnocheck.png",
+        "baseImageChecked" : "/interface/crafting/checkboxcheck.png",
+        "checked" : false,
+        "position" : [45, 7]
+      }
+    },
+    { "op": "replace", "path": "/gui/lblAutoCraft", "value": {
+        "type" : "label",
+        "position" : [55, 7],
+        "hAnchor" : "left",
+        "value" : "AUTO CRAFT"
+      }
+    },
+    { "op": "add", "path": "/scriptWidgetCallbacks/-", "value": "toggleAutoCraft" },
+    { "op": "replace", "path": "/scripts", "value": [ "/interface/scripted/recipeCrafterMFM/recipeCrafterMFMFUgui.lua" ] }
   ]
 ]

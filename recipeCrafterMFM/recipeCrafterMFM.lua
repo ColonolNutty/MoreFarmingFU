@@ -7,40 +7,49 @@ local logger = nil;
 
 function init(virtual)
   logger = DebugUtilsCN.init("[RCFU]")
-  RecipeCrafterMFMApi.init()
-  RecipeLocatorAPI.init();
+  RecipeCrafterMFMApi.init(virtual);
+  RecipeLocatorAPI.init(virtual);
   
   ----- Configuration -----
-  storage.consumeIngredientsOnCraft = false;
-  storage.holdIngredientsOnCraft = false;
-  storage.playSoundBeforeOutputPlaced = false;
-  storage.appendNewOutputToCurrentOutput = false;
+  logger.setDebugState(false);
+  if(storage.autoCraftState == nil) then
+    storage.autoCraftState = false;
+  end
+  rcUtilsFU.updateCraftSettings();
   -------------------------
+  message.setHandler("setAutoCraftState", rcUtilsFU.setAutoCraftState);
+  message.setHandler("getAutoCraftState", rcUtilsFU.getAutoCraftState);
 end
 
 function update(dt)
   RecipeCrafterMFMApi.update(dt)
-  if(RecipeCrafterMFMApi.containerContentsChanged) then
-    if(rcUtilsFU.isOutputSlotModified()) then
-      rcUtilsFU.consumeIngredients()
-      storage.currentlySelectedRecipe = nil;
-    elseif(rcUtilsFU.shouldRemoveOutput()) then
-      rcUtilsFU.removeOutput()
-      storage.currentlySelectedRecipe = nil;
-    else
-      RecipeCrafterMFMApi.craftItem()
-    end
+  if(not RecipeCrafterMFMApi.containerContentsChanged or not getAutoCraftState()) then
+    return
+  end
+  if(storage.currentlySelectedRecipe ~= nil and rcUtilsFU.isOutputSlotModified()) then
+    rcUtilsFU.consumeIngredients()
+    storage.currentlySelectedRecipe = nil;
+  elseif(storage.currentlySelectedRecipe ~= nil and rcUtilsFU.shouldRemoveOutput()) then
+    rcUtilsFU.removeOutput()
+    storage.currentlySelectedRecipe = nil;
+  elseif(getAutoCraftState()) then
+    RecipeCrafterMFMApi.craftItem()
   end
 end
 
 function die()
-  rcUtilsFU.removeOutput()
+  if(getAutoCraftState()) then
+    rcUtilsFU.removeOutput()
+  end
   RecipeCrafterMFMApi.die()
 end
 
 -------------------------------Callback Hooks------------------------------------
 
 function RecipeCrafterMFMApi.isOutputSlotAvailable()
+  if(not getAutoCraftState()) then
+    return RecipeCrafterMFMApi.isOutputSlotAvailableBase()
+  end
   local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
   -- Output slot is empty
   if(outputSlotItem == nil) then
@@ -70,21 +79,60 @@ function RecipeCrafterMFMApi.isOutputSlotAvailable()
   return not rcUtilsFU.isOutputSlotModified();
 end
 
-function RecipeCrafterMFMApi.onCraftStart()
-end
-
-function RecipeCrafterMFMApi.onRecipeFound()
-end
-
-function RecipeCrafterMFMApi.onNoIngredientsFound()
-end
-
 function RecipeCrafterMFMApi.onNoRecipeFound()
+  if(not getAutoCraftState()) then
+    return RecipeCrafterMFMApi.onNoRecipeFoundBase()
+  end
   rcUtilsFU.removeOutput();
   storage.currentlySelectedRecipe = nil;
 end
 
 -------------------------------------------------------------------
+
+function rcUtilsFU.updateCraftSettings()
+  if(getAutoCraftState()) then
+    storage.consumeIngredientsOnCraft = false;
+    storage.holdIngredientsOnCraft = false;
+    storage.playSoundBeforeOutputPlaced = false;
+    storage.appendNewOutputToCurrentOutput = false;
+  else
+    storage.consumeIngredientsOnCraft = true;
+    storage.holdIngredientsOnCraft = true;
+    storage.playSoundBeforeOutputPlaced = true;
+    storage.appendNewOutputToCurrentOutput = true;
+  end
+end
+
+function getAutoCraftState()
+  return rcUtilsFU.getAutoCraftState().autoCraftState
+end
+
+function rcUtilsFU.getAutoCraftState()
+  if(not storage or not storage.autoCraftState) then
+    if (storage) then
+      storage.autoCraftState = false;
+    end
+    return {
+      autoCraftState = false
+    }
+  end
+  return {
+    autoCraftState = storage.autoCraftState
+  }
+end
+
+function rcUtilsFU.setAutoCraftState(id, name, newValue)
+  if (storage.autoCraftState ~= newValue) then
+    if (newValue) then
+      storage.currentlySelectedRecipe = nil;
+    else
+      rcUtilsFU.consumeIngredients()
+      storage.currentlySelectedRecipe = nil;
+    end
+  end
+  storage.autoCraftState = newValue or false;
+  rcUtilsFU.updateCraftSettings()
+end
 
 function rcUtilsFU.isOutputSlotModified()
   local outputSlotItem = world.containerItemAt(entity.id(), storage.outputSlot)
@@ -94,7 +142,6 @@ function rcUtilsFU.isOutputSlotModified()
   -- If we haven't crafted and there is an output slot item, then it is modified
   -- If we haven't crafted and there is no output slot item, then it is not modified
   if(currentlySelectedRecipe == nil or currentlySelectedRecipe.output == nil) then
-    logger.logDebug("No selected recipe");
     return outputSlotItem ~= nil;
   end
   
