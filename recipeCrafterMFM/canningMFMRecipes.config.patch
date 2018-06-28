@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/possibleOutput/-",
+    "value": "peach"
+  },
+  {
+    "op": "add",
+    "path": "/possibleOutput/-",
+    "value": "cannedpeachMFM"
+  }
+]
