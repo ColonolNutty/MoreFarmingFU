@@ -174,6 +174,7 @@ function rcUtilsFU.consumeIngredients()
   RecipeCrafterMFMApi.playCraftSound()
   RecipeCrafterMFMApi.holdIngredients(storage.currentlySelectedRecipe)
   RecipeCrafterMFMApi.consumeIngredients()
+  RecipeCrafterMFMApi.recipeCrafted(storage.currentlySelectedRecipe)
 end
 
 function rcUtilsFU.shouldRemoveOutput()
