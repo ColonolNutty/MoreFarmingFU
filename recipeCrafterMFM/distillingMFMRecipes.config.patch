@@ -1,0 +1,150 @@
+[
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/cinnamonschnapps",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cinnamonschnapps",
+      "value" : {
+        "displayName" : "Cinnamon Schnapps",
+        "displayNameWithMethods" : "Cinnamon Schnapps ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "cinnamonschnapps.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/cinnamonMFM",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cinnamonMFM",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/spirits",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/spirits",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/bottle",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/bottle",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/sugar",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/sugar",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "cinnamonschnapps"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cinnamonschnapps/groups",
+      "value" : "distillingMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cinnamonschnapps/methods/distillingMFM",
+      "value" : "DISTILL"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cinnamonschnapps/recipes/-",
+      "value" : {
+        "input" : {
+          "sugar" : {
+            "count" : 1,
+            "id" : "sugar",
+            "icon" : "sugar.png",
+            "displayName" : "Sugar"
+          },
+          "cinnamonMFM" : {
+            "count" : 5,
+            "id" : "cinnamonMFM",
+            "icon" : "cinnamonMFM.png",
+            "displayName" : "Cinnamon"
+          },
+          "spirits" : {
+            "count" : 1,
+            "id" : "spirits",
+            "icon" : "spirits.png",
+            "displayName" : "Rectified Spirits"
+          },
+          "bottle" : {
+            "count" : 1,
+            "id" : "bottle",
+            "icon" : "bottle.png",
+            "displayName" : "Empty Bottle"
+          }
+        },
+        "output" : {
+          "name" : "cinnamonschnapps",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (DISTILL)",
+        "methods" : { "distillingMFM" : "DISTILL" },
+        "groups" : [ "distillingMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/cinnamonschnapps/displayNameWithMethods",
+      "value" : "Cinnamon Schnapps (DISTILL)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cinnamonMFM/-",
+      "value" : "cinnamonschnapps"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/spirits/-",
+      "value" : "cinnamonschnapps"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/bottle/-",
+      "value" : "cinnamonschnapps"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/sugar/-",
+      "value" : "cinnamonschnapps"
+    }
+  ]
+]

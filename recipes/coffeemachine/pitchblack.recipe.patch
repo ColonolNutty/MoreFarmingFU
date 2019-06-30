@@ -1,0 +1,16 @@
+[
+  {
+    "op": "replace",
+    "path": "/input",
+    "value": [
+      { "item" : "coffeebeans", "count" : 1 },
+      { "item" : "groundcoffeeMFM", "count" : 1 },
+      { "item" : "liquidwater", "count" : 2 }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/groups/-",
+    "value": "coffeeMFM"
+  }
+]

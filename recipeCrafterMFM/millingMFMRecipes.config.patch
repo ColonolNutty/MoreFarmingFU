@@ -1,0 +1,81 @@
+[
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/groundcinnamonMFM",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/groundcinnamonMFM",
+      "value" : {
+        "displayName" : "Ground Cinnamon",
+        "displayNameWithMethods" : "Ground Cinnamon ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "groundcinnamonMFM.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/cinnamon",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cinnamon",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "groundcinnamonMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/groundcinnamonMFM/groups",
+      "value" : "millingMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/groundcinnamonMFM/methods/millingMFM",
+      "value" : "MILL"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/groundcinnamonMFM/recipes/-",
+      "value" : {
+        "input" : {
+          "cinnamon" : {
+            "count" : 1,
+            "id" : "cinnamon",
+            "icon" : "cinnamon.png",
+            "displayName" : "Cinnamon"
+          }
+},
+        "output" : {
+          "name" : "groundcinnamonMFM",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (MILL)",
+        "methods" : { "millingMFM" : "MILL" },
+        "groups" : [ "millingMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/groundcinnamonMFM/displayNameWithMethods",
+      "value" : "Ground Cinnamon (MILL)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cinnamon/-",
+      "value" : "groundcinnamonMFM"
+    }
+  ]
+]

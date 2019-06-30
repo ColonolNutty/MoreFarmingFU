@@ -1,12 +1,158 @@
 [
-  {
-    "op": "add",
-    "path": "/possibleOutput/-",
-    "value": "peach"
-  },
-  {
-    "op": "add",
-    "path": "/possibleOutput/-",
-    "value": "cannedpeachMFM"
-  }
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/cannedpeachMFM",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cannedpeachMFM",
+      "value" : {
+        "displayName" : "Canned - Peach",
+        "displayNameWithMethods" : "Canned - Peach ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "cannedpeachMFM.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/peach",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/peach",
+      "value" : {
+        "displayName" : "Peach",
+        "displayNameWithMethods" : "Peach ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "peach.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/peach",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/peach",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/cannedpeachMFM",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cannedpeachMFM",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "cannedpeachMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "peach"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cannedpeachMFM/groups",
+      "value" : "canningMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cannedpeachMFM/methods/canningMFM",
+      "value" : "CAN"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/cannedpeachMFM/recipes/-",
+      "value" : {
+        "input" : {
+          "peach" : {
+            "count" : 1,
+            "id" : "peach",
+            "icon" : "peach.png",
+            "displayName" : "Peach"
+          }
+},
+        "output" : {
+          "name" : "cannedpeachMFM",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (CAN)",
+        "methods" : { "canningMFM" : "CAN" },
+        "groups" : [ "canningMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/cannedpeachMFM/displayNameWithMethods",
+      "value" : "Canned - Peach (CAN)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/peach/groups",
+      "value" : "canningMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/peach/methods/canningMFM",
+      "value" : "CAN"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/peach/recipes/-",
+      "value" : {
+        "input" : {
+          "cannedpeachMFM" : {
+            "count" : 1,
+            "id" : "cannedpeachMFM",
+            "icon" : "cannedpeachMFM.png",
+            "displayName" : "Canned - Peach"
+          }
+},
+        "output" : {
+          "name" : "peach",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (CAN)",
+        "methods" : { "canningMFM" : "CAN" },
+        "groups" : [ "canningMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/peach/displayNameWithMethods",
+      "value" : "Peach (CAN)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/peach/-",
+      "value" : "cannedpeachMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/cannedpeachMFM/-",
+      "value" : "peach"
+    }
+  ]
 ]

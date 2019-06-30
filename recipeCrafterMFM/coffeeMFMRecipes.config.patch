@@ -1,0 +1,661 @@
+[
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/americancoffee",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/americancoffee",
+      "value" : {
+        "displayName" : "Blonde Coffee",
+        "displayNameWithMethods" : "Blonde Coffee ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "americancoffee.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/fubloodchalice",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice",
+      "value" : {
+        "displayName" : "Blood Chalice",
+        "displayNameWithMethods" : "Blood Chalice ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "Blood_Chalice_slugbait.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/espresso",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/espresso",
+      "value" : {
+        "displayName" : "Espresso",
+        "displayNameWithMethods" : "Espresso ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "espresso.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/pitchblack",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/pitchblack",
+      "value" : {
+        "displayName" : "Dark Roast Coffee",
+        "displayNameWithMethods" : "Dark Roast Coffee ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "pitchblack.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/chunkymeatcoffee",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/chunkymeatcoffee",
+      "value" : {
+        "displayName" : "Chunky Meat Coffee",
+        "displayNameWithMethods" : "Chunky Meat Coffee ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "chunkymeatcoffee.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesToCraft/filteredcoffee",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/filteredcoffee",
+      "value" : {
+        "displayName" : "Cafe Au Lait",
+        "displayNameWithMethods" : "Cafe Au Lait ()",
+        "recipes" : [ ],
+        "methods" : { },
+        "icon" : "filteredcoffee.png"
+      }
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/espresso",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/espresso",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/groundcoffeeMFM",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/groundcoffeeMFM",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/milk",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/milk",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/liquidblood",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidblood",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/liquidpus",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidpus",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/darkmatter",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/darkmatter",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/bottle",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/bottle",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/liquidwater",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidwater",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/rottingfleshmaterial",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/rottingfleshmaterial",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "test",
+      "path" : "/recipesCraftFrom/coffeebeans",
+      "inverse" : true
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans",
+      "value" : [ ]
+    }
+  ],
+  [
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "americancoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "fubloodchalice"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "espresso"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "pitchblack"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "chunkymeatcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/possibleOutput/-",
+      "value" : "filteredcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/americancoffee/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/americancoffee/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/americancoffee/recipes/-",
+      "value" : {
+        "input" : {
+          "espresso" : {
+            "count" : 1,
+            "id" : "espresso",
+            "icon" : "espresso.png",
+            "displayName" : "Espresso"
+          },
+          "milk" : {
+            "count" : 1,
+            "id" : "milk",
+            "icon" : "milk.png",
+            "displayName" : "Milk"
+          }
+        },
+        "output" : {
+          "name" : "americancoffee",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/americancoffee/displayNameWithMethods",
+      "value" : "Blonde Coffee (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/recipes/-",
+      "value" : {
+        "input" : {
+          "liquidblood" : {
+            "count" : 5,
+            "id" : "liquidblood",
+            "icon" : "liquidbloodicon.png",
+            "displayName" : "Blood"
+          },
+          "coffeebeans" : {
+            "count" : 5,
+            "id" : "coffeebeans",
+            "icon" : "coffeebeans.png",
+            "displayName" : "Coffee Beans"
+          },
+          "darkmatter" : {
+            "count" : 1,
+            "id" : "darkmatter",
+            "icon" : "darkmatter.png",
+            "displayName" : "Dark Matter"
+          }
+        },
+        "output" : {
+          "name" : "fubloodchalice",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/fubloodchalice/displayNameWithMethods",
+      "value" : "Blood Chalice (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/fubloodchalice/recipes/-",
+      "value" : {
+        "input" : {
+          "liquidblood" : {
+            "count" : 15,
+            "id" : "liquidblood",
+            "icon" : "liquidbloodicon.png",
+            "displayName" : "Blood"
+          },
+          "bottle" : {
+            "count" : 1,
+            "id" : "bottle",
+            "icon" : "bottle.png",
+            "displayName" : "Empty Bottle"
+          }
+        },
+        "output" : {
+          "name" : "fubloodchalice",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/fubloodchalice/displayNameWithMethods",
+      "value" : "Blood Chalice (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/espresso/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/espresso/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/espresso/recipes/-",
+      "value" : {
+        "input" : {
+          "coffeebeans" : {
+            "count" : 2,
+            "id" : "coffeebeans",
+            "icon" : "coffeebeans.png",
+            "displayName" : "Coffee Beans"
+          },
+          "liquidwater" : {
+            "count" : 1,
+            "id" : "liquidwater",
+            "icon" : "liquidwatericon.png",
+            "displayName" : "Water"
+          }
+        },
+        "output" : {
+          "name" : "espresso",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/espresso/displayNameWithMethods",
+      "value" : "Espresso (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/pitchblack/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/pitchblack/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/pitchblack/recipes/-",
+      "value" : {
+        "input" : {
+          "coffeebeans" : {
+            "count" : 1,
+            "id" : "coffeebeans",
+            "icon" : "coffeebeans.png",
+            "displayName" : "Coffee Beans"
+          },
+          "groundcoffeeMFM" : {
+            "count" : 1,
+            "id" : "groundcoffeeMFM",
+            "icon" : "groundcoffeeMFM.png",
+            "displayName" : "Ground Coffee"
+          },
+          "liquidwater" : {
+            "count" : 2,
+            "id" : "liquidwater",
+            "icon" : "liquidwatericon.png",
+            "displayName" : "Water"
+          }
+        },
+        "output" : {
+          "name" : "pitchblack",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/pitchblack/displayNameWithMethods",
+      "value" : "Dark Roast Coffee (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/chunkymeatcoffee/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/chunkymeatcoffee/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/chunkymeatcoffee/recipes/-",
+      "value" : {
+        "input" : {
+          "liquidpus" : {
+            "count" : 50,
+            "id" : "liquidpus",
+            "icon" : "liquidpusicon.png",
+            "displayName" : "Pus"
+          },
+          "coffeebeans" : {
+            "count" : 8,
+            "id" : "coffeebeans",
+            "icon" : "coffeebeans.png",
+            "displayName" : "Coffee Beans"
+          },
+          "rottingfleshmaterial" : {
+            "count" : 2,
+            "id" : "rottingfleshmaterial",
+            "icon" : "rottingfleshmaterial.png",
+            "displayName" : "Rotting Flesh"
+          }
+        },
+        "output" : {
+          "name" : "chunkymeatcoffee",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/chunkymeatcoffee/displayNameWithMethods",
+      "value" : "Chunky Meat Coffee (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/filteredcoffee/groups",
+      "value" : "coffeeMFM"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/filteredcoffee/methods/coffeeMFM",
+      "value" : "COFFEE"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesToCraft/filteredcoffee/recipes/-",
+      "value" : {
+        "input" : {
+          "coffeebeans" : {
+            "count" : 1,
+            "id" : "coffeebeans",
+            "icon" : "coffeebeans.png",
+            "displayName" : "Coffee Beans"
+          },
+          "milk" : {
+            "count" : 1,
+            "id" : "milk",
+            "icon" : "milk.png",
+            "displayName" : "Milk"
+          }
+        },
+        "output" : {
+          "name" : "filteredcoffee",
+          "count" : 1
+        },
+        "excludeFromRecipeBook" : false,
+        "displayMethods" : " (COFFEE)",
+        "methods" : { "coffeeMFM" : "COFFEE" },
+        "groups" : [ "coffeeMFM" ]
+      }
+    },
+    {
+      "op" : "replace",
+      "path" : "/recipesToCraft/filteredcoffee/displayNameWithMethods",
+      "value" : "Cafe Au Lait (COFFEE)"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/espresso/-",
+      "value" : "americancoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/groundcoffeeMFM/-",
+      "value" : "pitchblack"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/milk/-",
+      "value" : "americancoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/milk/-",
+      "value" : "filteredcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidblood/-",
+      "value" : "fubloodchalice"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidpus/-",
+      "value" : "chunkymeatcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/darkmatter/-",
+      "value" : "fubloodchalice"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/bottle/-",
+      "value" : "fubloodchalice"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidwater/-",
+      "value" : "espresso"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/liquidwater/-",
+      "value" : "pitchblack"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/rottingfleshmaterial/-",
+      "value" : "chunkymeatcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans/-",
+      "value" : "fubloodchalice"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans/-",
+      "value" : "espresso"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans/-",
+      "value" : "pitchblack"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans/-",
+      "value" : "chunkymeatcoffee"
+    },
+    {
+      "op" : "add",
+      "path" : "/recipesCraftFrom/coffeebeans/-",
+      "value" : "filteredcoffee"
+    }
+  ]
+]
